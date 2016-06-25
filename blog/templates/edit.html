@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+    <head>
+        <title>게시물 편집</title>
+    </head>
+
+    <body>
+
+        <form method='POST' action="">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <p>
+            <button type="submit">저장</button>
+            </p>
+        </form>
+
+    </body>
+
+</html>

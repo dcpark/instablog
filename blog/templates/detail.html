@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block page_title %}{{ post.title }} - 게시물 보기{% endblock %}
+
+{% block body %}
+    {% include 'part_detail.html' %}
+
+    <p>댓글 리스트</p>
+
+    {% for comment in comments %}
+        {% include 'part_comment.html' with comment=comment %}
+    {% endfor %}
+
+    <p><a href="{% url 'blog:list' %}">글 목록</a></p>
+{% endblock %}
